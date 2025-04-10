@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss";
+
+body {
+  background: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  padding-bottom: 90px;
+  animation: 3s spinner linear infinite;
+  transition: all 3s ease-in;
+}
+
+@keyframes spinner {
+  0% {
+    /* background-image: linear-gradient(to right, #1e3a8a, #ef4444, #10b981); */
+    background-image: conic-gradient(
+      #10b981 60deg,
+      #1e3a8a 180deg,
+      #10b981 360deg,
+      #1e3a8a 300deg,
+      #ef4444 240deg
+    );
+  }
+  50% {
+    /* background-image: linear-gradient(90deg, #10b981, #1e3a8a, #ef4444); */
+    background-image: conic-gradient(
+      #e00000 0deg,
+      #1e3a8a 180deg,
+      #ad16a1 360deg
+    );
+  }
+  100% {
+    background-image: conic-gradient(
+      #1e3a8a 45deg,
+      #10b981 135deg,
+      #ef4444 215deg,
+      #ad16a1 305deg
+    );
+  }
+}
+
+.navAnchor {
+  display: inline;
+}
+.navAnchor::before {
+  content: " ";
+  position: absolute;
+  /* width: 15px; */
+  height: 10px;
+  border-radius: 50%;
+  /* background-image: conic-gradient(#1e3a8a, #ef4444, #10b981); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 15px;
+  transition: all 0.5s linear;
+}
+.navAnchor.active::before {
+  transition: all 0.5s linear;
+  background-image: linear-gradient(#1e3a8a, #ef4444, #10b981);
+  width: 10px;
+}
