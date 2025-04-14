@@ -10,19 +10,19 @@ export const NavLink = () => {
 
     
 return (
-    <div className='self-end '>
+    <div className='self-end z-50'>
         <div >
             <ul className='hidden md:flex flex-row items-center justify-center text-white md:gap-12'>
                 {/* Home */}
-                <NavAnchor className='w-fit navAnchor relative' to={'/'}>
-                    <li className=' text-white text-base capitalize font-bold'>Home</li>
+                <NavAnchor className='navAnchor relative' to={'/'}>
+                    <li className=' text-white text-base capitalize font-bold z-30 bg-black '>Home</li>
                 </NavAnchor>
                 
                 {/* Movies Links */}
                 <div className='relative group '>
                     <div className='flex items-center justify-center gap-2'>
                         <NavAnchor className='navAnchor relative group ' to={'/movies'}>
-                            <li className=' inline-block text-base capitalize font-bold '>
+                            <li className=' inline-block text-base capitalize font-bold  text-white z-30 bg-black' >
                                 Movies
                             </li>
                         </NavAnchor>
@@ -45,7 +45,7 @@ return (
                 <div className='relative group'>
                     <div className='flex  items-center justify-center gap-2'>
                         <NavAnchor className='navAnchor relative' to={'/series'}>
-                            <li className='inline-block text-base capitalize font-bold'>
+                            <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black'>
                                 Series
                             </li>
                         </NavAnchor>
@@ -66,13 +66,13 @@ return (
                 <div className='relative group '>
                     <div className='flex  items-center md:justify-center gap-2'>
                         <NavAnchor className='navAnchor relative' to={'/tv-shows'} >
-                            <li className=' inline-block text-base capitalize font-bold'>
+                            <li className='  text-white text-base capitalize font-bold z-30 bg-black '>
                                 Tv-Shows
                             </li>
                         </NavAnchor>
                         <IoMdArrowDropdown size={20} className='cursor-pointer hover:text-[#3b82fb] text-[#fff]'/>
                     </div>
-                    <div className='hidden dropdown_menu group-hover:flex flex-col justify-center  absolute w-[200px] top-6 -left-[100%] bg-[#000] pt-8 pb-4 px-6 gap-4'>
+                    <div className='hidden dropdown_menu group-hover:flex flex-col justify-center absolute w-[200px] top-6 -left-[50%] bg-[#000] pt-8 pb-4 px-6 gap-4'>
                         <Link to='/tv-shows/popular' className={`${activeSubMenu === 'populartv' ? 'px-4 py-2 border-b-2 border-[#ef4444] bg-[#6b7280]' : ''} mt-2 border-[#ef4444] hover:bg-[#6b7280] hover:px-4 hover:py-2 hover:border-b-2 transition-all`} onClick={() => setActiveSubMenu('populartv')}>Popular</Link>
 
                         <Link to='/tv-shows/airing' className={`${activeSubMenu === 'airing' ? 'px-4 py-2 border-b-2 border-[#ef4444] bg-[#6b7280]' : ''} mt-2 border-[#ef4444] hover:bg-[#6b7280] hover:px-4 hover:py-2 hover:border-b-2 transition-all`} onClick={() => setActiveSubMenu('airing')}>Airing Today</Link>
@@ -86,14 +86,14 @@ return (
 
                 {/* about */}
                 <NavAnchor className='navAnchor relative w-fit' to={'/about'} >
-                    <li className='inline-block text-base capitalize font-bold'>
+                    <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black'>
                         About
                     </li>
                 </NavAnchor>
 
                 {/* contact */}
                 <NavAnchor className='navAnchor relative w-fit' to={'/contact'} >
-                    <li className='inline-block text-base capitalize font-bold'>
+                    <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black '>
                         Contact
                     </li>
                 </NavAnchor>
