@@ -11,8 +11,8 @@ li {
   font-family: "Poppins", sans-serif;
 }
 
-.monserate {
-  font-family: "Montserrat", sans-serif;
+.roboto {
+  font-family: "Roboto-mono", sans-serif;
 }
 
 .gradient-bar {
@@ -92,6 +92,7 @@ li {
   padding-inline: 8px;
   padding-block: 4px;
   line-height: 1;
+  background: #000;
 }
 
 @keyframes linkAnimation {
@@ -131,8 +132,13 @@ li {
       #10b981 360deg
     );
   }
+  
 }
-
+.movie_title {
+  background: linear-gradient(360deg, #0400ff, #03e203, #50C878, #8f0154,  #1e3a8a);
+  color: transparent;
+  background-clip: text;
+}
 
 
 

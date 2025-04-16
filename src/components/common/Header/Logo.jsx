@@ -4,7 +4,7 @@ import { imageLibrary } from '../../../assets/assets'
 export const Logo = () => {
 
   return (
-      <div>
+      <div className='md:mb-6 lg:mb-0'>
       <img
         src={imageLibrary.filmoraLogo}
         className='w-[100px] md:w-[200px]'

@@ -10,19 +10,19 @@ export const NavLink = () => {
 
     
 return (
-    <div className='self-end z-50'>
+    <div className='self-end md:self-center lg:self-end z-50'>
         <div >
-            <ul className='hidden md:flex flex-row items-center justify-center text-white md:gap-12'>
+            <ul className='hidden md:flex flex-row items-center justify-center text-white lg:gap-12 md:gap-8'>
                 {/* Home */}
                 <NavAnchor className='navAnchor relative' to={'/'}>
-                    <li className=' text-white text-base capitalize font-bold z-30 bg-black '>Home</li>
+                    <li className=' text-white text-base capitalize font-bold z-30  '>Home</li>
                 </NavAnchor>
                 
                 {/* Movies Links */}
                 <div className='relative group '>
                     <div className='flex items-center justify-center gap-2'>
                         <NavAnchor className='navAnchor relative group ' to={'/movies'}>
-                            <li className=' inline-block text-base capitalize font-bold  text-white z-30 bg-black' >
+                            <li className=' inline-block text-base capitalize font-bold  text-white z-30 ' >
                                 Movies
                             </li>
                         </NavAnchor>
@@ -45,7 +45,7 @@ return (
                 <div className='relative group'>
                     <div className='flex  items-center justify-center gap-2'>
                         <NavAnchor className='navAnchor relative' to={'/series'}>
-                            <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black'>
+                            <li className='inline-block  text-white text-base capitalize font-bold z-30 '>
                                 Series
                             </li>
                         </NavAnchor>
@@ -66,7 +66,7 @@ return (
                 <div className='relative group '>
                     <div className='flex  items-center md:justify-center gap-2'>
                         <NavAnchor className='navAnchor relative' to={'/tv-shows'} >
-                            <li className='  text-white text-base capitalize font-bold z-30 bg-black '>
+                            <li className='  text-white text-base capitalize font-bold z-30  '>
                                 Tv-Shows
                             </li>
                         </NavAnchor>
@@ -86,14 +86,14 @@ return (
 
                 {/* about */}
                 <NavAnchor className='navAnchor relative w-fit' to={'/about'} >
-                    <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black'>
+                    <li className='inline-block  text-white text-base capitalize font-bold z-30 '>
                         About
                     </li>
                 </NavAnchor>
 
                 {/* contact */}
                 <NavAnchor className='navAnchor relative w-fit' to={'/contact'} >
-                    <li className='inline-block  text-white text-base capitalize font-bold z-30 bg-black '>
+                    <li className='inline-block  text-white text-base capitalize font-bold z-30  '>
                         Contact
                     </li>
                 </NavAnchor>

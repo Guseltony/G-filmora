@@ -10,7 +10,7 @@ export const IconHeader = () => {
     
 return (
     <div className='self-end'>
-        <div className='flex gap-4 md:gap-8 items-center justify-center'>
+        <div className='flex gap-4 lg:gap-8 items-center justify-center md:absolute lg:relative md:top-10 md:right-10 lg:top-0 lg:right-0'>
             <FaSearch size={20} onClick={() => setShowSearchBar(prev => !prev)} className='cursor-pointer hover:text-[#3b82fb] text-[#fff]'/>
             <MdOutlineFavorite size={20} className='cursor-pointer hover:text-[#3b82fb] text-[#fff]'/>
             <MdDarkMode size={20} className='cursor-pointer hover:text-[#3b82fb] text-[#fff]'/>
