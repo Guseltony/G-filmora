@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { MdDarkMode, MdOutlineFavorite } from 'react-icons/md'
-import { AppContext, MovieContextProvider } from '../../context/MovieContext'
+import { AppContext, MovieContextProvider } from '../../../context/MovieContext'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 export const IconHeader = () => {

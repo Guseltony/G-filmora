@@ -1,7 +1,7 @@
 import React, {  useContext } from 'react'
 import { IoIosCloseCircle, IoMdArrowDropdown } from 'react-icons/io'
 import { Link, NavLink as NavAnchor } from 'react-router-dom'
-import { AppContext } from '../../context/MovieContext'
+import { AppContext } from '../../../context/MovieContext'
 
 export const NavLink = () => {
 

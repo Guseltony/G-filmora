@@ -5,6 +5,8 @@
 body {
   background: #000;
   font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 li {
@@ -138,6 +140,19 @@ li {
   background: linear-gradient(360deg, #0400ff, #03e203, #50C878, #8f0154,  #1e3a8a);
   color: transparent;
   background-clip: text;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #ad16a1 ;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 
