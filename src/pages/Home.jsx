@@ -12,11 +12,11 @@ return (
     <div>
         <Header />
         <HeroBanner />
-        <TrendingMovies />
-        <MovieSect />
-        <MovieTrailer />
-        <TvSeries />
         <Genre />
+        <TrendingMovies />
+        <MovieTrailer />
+        <MovieSect />
+        <TvSeries />
     </div>
 )
 }

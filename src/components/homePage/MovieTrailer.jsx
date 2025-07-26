@@ -26,13 +26,14 @@ const MovieTrailer = () => {
         
         const fetchMovieTrailer = async () => {
             const id = await getMovies();
-            console.log(id)
+            console.log('id:', id)
             const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?append_to_response=videos,credits`, apiOption)
             const movieVideos = response.data.videos.results
             const trailerVideo = movieVideos.filter((vid) => vid.type === 'Trailer')
             if (trailerVideo) {
                 setTrailerKey(trailerVideo[trailerVideo.length - 1]?.key)
             }
+            console.log('video', trailerVideo)
         }
 
         fetchMovieTrailer()
@@ -49,7 +50,6 @@ return (
                 <iframe
                     className=' border-0 outline-0 w-[100%] lg:w-[80%] h-[100%]'
                     src={`https://www.youtube.com/embed/${trailerKey}?autoplay=0&mute=1?modestbranding=1&controls=1&rel=0&fs=0&disablekb=1`}
-                    frameborder='0'
                     allowFullScreen></iframe>
         </div>
         </div>

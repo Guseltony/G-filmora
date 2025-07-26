@@ -7,7 +7,7 @@ import { MovieCard } from '../movies/MovieCard/MovieCard'
 
 const TvSeries = () => {
 
-        const tvSeriesArray = ['today', 'on the air', 'rated', 'popular']
+        const tvSeriesArray = ['today', 'airing', 'rated', 'popular']
         const [activeTab, setActiveTab] = useState('today')
         const [tvSeriesFilter, setTvSeriesFilter] = useState([])
         const [today, setToday] = useState([])
@@ -29,14 +29,14 @@ const TvSeries = () => {
             case 'rated': 
                 setTvSeriesFilter(rated)
                 break
-            case 'on the air':
+            case 'airing':
                 setTvSeriesFilter(onTheAir)
                 break
             default:
                 break;
         }
     }
-
+            
     useEffect(() => {
         const fetchMovies = async () => { 
             try {
@@ -73,14 +73,14 @@ const TvSeries = () => {
 
 return (
     <div>
-        <div className="mt-8 px-[10px] lg:px-[5%] xl:px-[10%] overflow-hidden">
+        <div className="mt-8 px-[5px] lg:px-[5%] xl:px-[10%] overflow-hidden">
             <Title title='TV-Series' />
             <div className='border-2 border-[#ef4444] rounded-full flex gap-2 lg:gap-4 mt-6 overflow-x-auto w-[100%] lg:w-fit scrollbar md:pr-0 '>
                 {
                     tvSeriesArray.map((m, index) => {return <MovieTab key={index} activeTab={ activeTab} t={m} onclick={() => handleMovieTab(m)}/>})
                 }
             </div>
-            <div className='flex items-center gap-6 lg:gap-10 overflow-x-auto mt-4 lg:mt-8 h-[350px] pl-4 lg:pl-8 scrollbar mb-10'>
+            <div className='flex items-center gap-4 lg:gap-10 overflow-x-auto mt-4 lg:mt-8 h-[350px] pl-4 lg:pl-8 scrollbar mb-10'>
                 {
                     tvSeriesFilter.map((movie) =>
                     {

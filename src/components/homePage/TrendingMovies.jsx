@@ -70,19 +70,19 @@ const TrendingMovies = () => {
 
         fetchTrendingMovies();
     }, [])
-
+                        
 return (
     <div>
-        <div className='mt-8 px-[10px] lg:px-[5%] xl:px-[10%]'>
+        <div className='mt-8 px-[5px] lg:px-[5%] xl:px-[10%]'>
             <Title title='Trending Today'/>
-            <div className='border-2 border-[#ef4444] rounded-full flex w-fit gap-2 lg:gap-4 mt-6'>
+            <div className='border-2 border-[#ef4444] rounded-full flex gap-2 lg:gap-4 mt-6 overflow-x-auto w-[100%] lg:w-fit scrollbar md:pr-0 '>
                 {
                     trendingArray.map((t, index) => {
                         return <MovieTab key={index} activeTab={ activeTab} t={t} onclick={() => handleTrendingTab(t)} />
                     })
                 }
             </div>
-            <div className='flex items-center gap-6 lg:gap-10 mt-4 lg:mt-8 h-[350px] pl-4 lg:pl-8 overflow-x-auto scrollbar mb-10'>
+            <div className='flex items-center gap-4 lg:gap-10 mt-4 lg:mt-8 h-[350px] pl-4 lg:pl-8 overflow-x-auto scrollbar mb-10'>
                 {
                     trendingFilter.map((movie) => {
                         return (

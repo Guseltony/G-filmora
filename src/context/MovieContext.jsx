@@ -15,8 +15,16 @@ export const MovieContextProvider = ({children}) => {
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODJiZjk2Yzc5NzUzNjM5ZmMxMTUxZDBhMWU5M2Y0NCIsIm5iZiI6MTc0Mzg4MzMyNy45MDksInN1YiI6IjY3ZjE4YzNmMGM3OTFiZWI1N2FkNWU0ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-YzI1Bn_lITOSwskULkEHIqnH2PnPKhTqQTNOTbWlmo'
             }
     }
+
+      const shuffleArray = (sortedProducts) => {
+    for (let i = sortedProducts.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      [sortedProducts[i], sortedProducts[randomIndex]] = [sortedProducts[randomIndex], sortedProducts[i]];
+    }
+    return sortedProducts;
+  };
     
-    const value = {showSearchBar, setShowSearchBar, isSmallerScreenMenu, setIsSmallerScreenMenu, activeSubMenu, setActiveSubMenu, apiOption}
+    const value = {showSearchBar, setShowSearchBar, isSmallerScreenMenu, setIsSmallerScreenMenu, activeSubMenu, setActiveSubMenu, apiOption, shuffleArray}
 
 return (
     <AppContext.Provider value={value}>
